@@ -1,0 +1,13 @@
+{
+	"draw_white_space": "all",
+	"find_selected_text": true,
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"scroll_past_end": true,
+	"show_full_path": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false
+}
