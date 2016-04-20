@@ -1,0 +1,28 @@
+"*":
+  core:
+    themes: [
+      "atom-dark-ui"
+      "one-dark-syntax"
+    ]
+  "custom-title":
+    template: '''
+      <% if (relativeFilePath.length > 0) { %><%= relativeFilePath %><% } else { %><%= filePath %><% } %> - <%= projectPath %> [<%= gitHead %>]
+      
+    '''
+  editor:
+    fontSize: 13
+    invisibles: {}
+    preferredLineLength: 100
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "4fa29ffd-029e-7fe8-6668-93e0e66cb316"
+  "remote-sync": {}
+  "spell-check": {}
+  "terminal-plus":
+    core: {}
+    style: {}
+  welcome:
+    showOnStartup: false
