@@ -1,0 +1,62 @@
+Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa
+
+# reddit bastion
+# Host keys:
+# 2048 7f:ee:7c:74:f6:31:81:70:9b:50:54:6f:1d:6e:e2:f1  root@ip-10-0-175-213 (RSA)
+# 256 41:6b:20:09:95:89:4e:51:4d:67:bb:d6:09:8d:cf:53  root@ip-10-0-175-213 (ECDSA)
+# 256 b0:ed:06:fa:9d:c6:b4:2d:47:11:a6:54:98:93:f6:11  root@ip-10-0-175-213 (ED25519)
+# Or if you have a newer SSH that shows the fingerprint hashed with SHA-256:
+# 2048 SHA256:uEcbi+JnodRa16vLKLr2Cr0g0OFhdvjVR7KYEuvsebg root@ip-10-0-175-213 (RSA)
+# 256 SHA256:ZrC4sYJo2myk+8swG18I7NyI/sK2gZr0XZCnDHrs1sw root@ip-10-0-175-213 (ECDSA)
+# 256 SHA256:z5EXF6iX3QrgE4RbPDOyrCUnAMbHmwbbOu0kdJ16tLI root@ip-10-0-175-213 (ED25519)
+Host rb tardis reddit-bastion
+  ForwardAgent yes
+  Hostname 107.22.176.232
+  Port 666
+  StrictHostKeyChecking yes
+
+Host gangplank
+  ForwardAgent yes
+  Hostname 52.24.108.128
+  Port 666
+  StrictHostKeyChecking yes
+
+Host staging-app-01
+  ProxyCommand ssh reddit-bastion nc %h %p
+
+Host db data-bastion
+  ForwardAgent yes
+  hostname 54.148.176.34
+  Port 666
+  StrictHostKeyChecking yes
+
+Host dt data-test-bastion
+  ForwardAgent yes
+  hostname 52.40.136.170
+  Port 666
+  StrictHostKeyChecking yes
+
+# redditgifts.com
+Host gb gifts-bastion
+  ForwardAgent yes
+  Hostname 107.20.147.98
+  Port 666
+  StrictHostKeyChecking no
+  IdentityFile ~/.ssh/id_rsa
+
+Host ngb new-gifts-bastion
+  ForwardAgent yes
+  Hostname 54.209.59.36
+  Port 666
+  StrictHostKeyChecking yes
+
+# Developer Integration
+Host di devint-bastion
+  ForwardAgent yes
+  Hostname 52.204.116.180
+  Port 666
+  StrictHostKeyChecking yes
+
