@@ -38,8 +38,6 @@ alias sq="ssh -L 3306:gifts-production-primary.cgzk1xobcfng.us-east-1.rds.amazon
 #ulimit -n 200000
 #ulimit -u 2048
 
-export LINGO_API_TOKEN=72Zb2DysKEeZteawX0V9i8OU5D0W0zR36HMpdao8BHI
-export GQL_DEV_SHARED_SECRET=GtUdflPmwqifAG7PSoQq2wT4M17P5GFsIoJ7aB8G
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
 
