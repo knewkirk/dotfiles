@@ -33,7 +33,6 @@ alias l="npm run lint:fixup"
 alias clean="npm run clean && rm -rf node_modules && yarn cache clean"
 alias rage="rkube cluster select devint"
 alias ve="source ~/virtualenv/gifts/bin/activate"
-alias sq="ssh -L 3306:gifts-production-primary.cgzk1xobcfng.us-east-1.rds.amazonaws.com:3306 gb -N"
 
 #ulimit -n 200000
 #ulimit -u 2048
@@ -69,7 +68,6 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 export PATH="/usr/local/opt/bison/bin:$PATH"
-export MFA_DEVICE='arn:aws:iam::210246326331:mfa/kyle.newkirk'
 
 export YVM_DIR=/usr/local/opt/yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
